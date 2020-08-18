@@ -13,4 +13,4 @@ Scenario: Compute parking slots to reserve for visiting specialists
   Given that the hospital has consulting specialists,
   and there is enough additional space in parking lot to reserve parking space
   When a patient gets admitted
-  Then track type of specialist needed
+  Then track type of specialist needed and reserve parking space.
