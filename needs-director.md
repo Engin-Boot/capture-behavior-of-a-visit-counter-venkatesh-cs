@@ -3,7 +3,7 @@
 Scenario: Show patient visits during working days and holidays
 
   Given hospital issues an ID card for every visitor
-  and the ID card is returned by the visitor after the visit
+  and the user returns the ID card after visit
   When the patient enters the hospital and signs up
   for an ID card
   Then track the number of IDs issued to examine trends
