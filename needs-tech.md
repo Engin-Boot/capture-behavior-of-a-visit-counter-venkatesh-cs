@@ -8,6 +8,6 @@ Then store count value in in non-volatile memory.
 
 Scenario: Reconcile counts if the sensor is offline for a while
 
-Given count data is stored in some server and is accessable within reasonable time
+Given count data is stored in some server and can be accessed within reasonable time
 When sensor is back on line,
 Then read count data from server and start counting from that value
