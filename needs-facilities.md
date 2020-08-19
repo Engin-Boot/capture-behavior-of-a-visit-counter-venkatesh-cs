@@ -5,7 +5,7 @@ Scenario: Report visitor trends during a week of operation
 Given counter system has synced count data everyday of the week
 and the data is accurate
 When a new week starts (Defined by the manager)
-then aggreagte the count of the whole week and generate a PDF which contains
+then aggregate the count of the whole week and generate a PDF which contains
 (i) Daily data (ii) Number of patients visited during the week
 (iii) Hourly distribution
 
