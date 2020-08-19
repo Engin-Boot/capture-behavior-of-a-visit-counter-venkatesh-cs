@@ -5,7 +5,7 @@ Scenario: Show patient visits during working days and holidays
   Given hospital issues an ID card for every visitor
   and the user returns the ID card after visit
   and the counter sensor is reset everyday at 12 PM
-  and there is a central server that is connected to the counter sensor system
+  and there is a central server connected to the counter sensor system
   When the patient enters the hospital and signs up for an ID card
   Then increase the counter by one and generate a report at 12PM local time
   and push the data to the central server
