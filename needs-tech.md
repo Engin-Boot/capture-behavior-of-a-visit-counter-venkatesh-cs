@@ -2,7 +2,7 @@
 
 Scenario: Recover across restarts of the server that runs the visit-counter
 
-Given that counter system has non-volatile memory 
+Given that counter system has non-volatile memory
 and the counter system is connected to a central server
 and the counter system syncs the count data with the server every hour
 and the counter system updates value of counter
@@ -15,7 +15,7 @@ to the value present in the non-volatile memory.
 
 Scenario: Reconcile counts if the sensor is offline for a while
 
-Given that counter system has non-volatile memory 
+Given that counter system has non-volatile memory
 and the counter system is connected to a central server
 and the counter system syncs the count data with the server every hour
 and the counter system updates value of counter
