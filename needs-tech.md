@@ -2,12 +2,26 @@
 
 Scenario: Recover across restarts of the server that runs the visit-counter
 
-Given that the system knows the value of the visit-counter
-When the system fails for any reason,
-Then store count value in non-volatile memory.
+Given that counter system has non-volatile memory 
+and the counter system is connected to a central server
+and the counter system syncs the count data with the server every hour
+and the counter system updates value of counter
+in non-volatile memory every half hour
+When the counter system fails for any reason,
+then system counter loads counter value from both from the central server
+and non-volatile memory. System compares the value and if the counter values
+are not equal, then system changes value of counter in the central server
+to the value present in the non-volatile memory.
 
 Scenario: Reconcile counts if the sensor is offline for a while
 
-Given that sensor system can access count data from central server
-When sensor is back online,
-Then read count data from server and start counting from that value
+Given that counter system has non-volatile memory 
+and the counter system is connected to a central server
+and the counter system syncs the count data with the server every hour
+and the counter system updates value of counter
+in non-volatile memory every half hour
+When the counter system fails for any reason,
+then system counter loads counter value from both from the central server
+and non-volatile memory. System compares the value and if the counter values
+are not equal, then system changes value of counter in the central server
+to the value present in the non-volatile memory.
